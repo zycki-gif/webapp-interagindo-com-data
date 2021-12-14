@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale" />
+    <link rel="stylesheet" type="text/css" href="/static/main.css" />
+  </head>
+  <body>
+    <img
+      id="banner"
+      src="https://images.unsplash.com/photo-1533788179956-82e8a027c962?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+      alt="yellow bikes for rent"
+    />
+    <div class="filter">
+      <form action="http://127.0.0.1:5000/" method="get" id="year">
+        <label for="lyear">Year: </label>
+        <input id="lyear" name="year" type="text" />
+        <input type="submit" value="Submit" />
+      </form>
+      <form action="http://127.0.0.1:5000/" method="get" id="month">
+        <label for="lmonth">Month: </label>
+        <input id="lmonth" name="month" type="text" />
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+    <div class="scoreboard">
+      <img
+        id="logo"
+        src="https://cdn-icons-png.flaticon.com/512/3198/3198344.png"
+        alt="logo"
+        width="100px"
+        height="100px"
+      />
+      
+      {% for tota in totals %}
+      <p>{{ tota["title"] }}:</p>
+      <h1>{{ tota["total"] }}</h1>
+      {% endfor %}
+
+    <div class="containerSeason">
+      <table id="seasonAvarage">
+        <h3>Média de locações por estação</h3>
+        <thead>
+          <tr>
+            <th>id</th>
+            <th>season</th>
+            <th>Média de Locações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>3</td>
+            <td>236.45</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>2</td>
+            <td>208.45</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>4</td>
+            <td>198.45</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>1</td>
+            <td>111.45</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="containerHour">
+      <table id="hourAvarage">
+        <h3>Horário com maiores médias</h3>
+        <thead>
+          <tr>
+            <th>hour</th>
+            <th>Média de Locações</th>
+          </tr>
+          {% for hour in hours %}
+          <tr>
+          {% for key, value in hour.items() %}
+          
+          <td> {{ value }}</td>
+            {% endfor %}
+          </tr>
+          {%- endfor %}
+
+      </table>
+    </div>
+    <div class="containerLess">
+      <table id="lessHourAvarage">
+        <h3>Horário com menores médias</h3>
+        <thead>
+          <tr>
+            <th>id</th>
+            <th>hour</th>
+            <th>Média de Locações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>4AM</td>
+            <td>6</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>3AM</td>
+            <td>11</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>5AM</td>
+            <td>19</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

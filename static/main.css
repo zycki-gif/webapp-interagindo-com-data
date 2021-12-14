@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#banner {
+  height: 400px;
+  width: 50%;
+  margin-left: 20%;
+}
+.filter {
+  display: flex;
+  margin-left: 50px;
+}
+#year {
+  border: 1px solid;
+  padding: 10px;
+  box-shadow: 5px 10px 8px #888888;
+  padding: 20px;
+}
+#month {
+  border: 1px solid;
+  padding: 10px;
+  box-shadow: 5px 10px 8px #888888;
+  margin-left: 150px;
+  padding: 20px;
+}
+.scoreboard {
+  display: inline-block;
+  margin-top: 30px;
+  margin-left: 50px;
+}
+#logo {
+  padding: 2px;
+}
+.location2011 {
+  padding: 25px;
+  margin-left: 150px;
+}
+.location2011 h3 {
+  font-size: 2rem;
+}
+
+.location {
+  padding: 25px;
+}
+.location h3 {
+  font-size: 2rem;
+}
+.location2012 {
+  padding: 25px;
+  margin-left: 150px;
+}
+.location2012 h3 {
+  font-size: 2rem;
+}
+
+
+
+.containerHour {
+  margin-left: 50px;
+}
+
+
+thead {
+  background-color: grey;
+}
